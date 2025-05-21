@@ -104,11 +104,11 @@ public class TurnBasedGame {
                     System.out.println("------------------------------");
 
                 } else if (in.equalsIgnoreCase("za warudo")) {
-                    if (zaWarudoCooldown == 0 && playerMP >= 10) {
+                    if (zaWarudoCooldown == 0 && playerMP >= 50) {
                         timeStopCounter = 3;
                         zaWarudoCooldown = 10;
                         System.out.println("------------------------------");
-                        System.out.println("You stunned the enemy! It will skip its next 3 turns.");
+                        System.out.println("You stopped time.");
                         lastHP.push(botHP);
                         playerMP -= 10;
                     } else if (zaWarudoCooldown > 0) {
@@ -116,7 +116,7 @@ public class TurnBasedGame {
                         System.out.println("Za Warudo is still on cooldown for " + zaWarudoCooldown + " turns.");
                     } else {
                         System.out.println("------------------------------");
-                        System.out.println("Not enough MP to use stun.");
+                        System.out.println("Not enough MP to use ZA WARUDO.");
                     }
                 } else if (in.equalsIgnoreCase("skip")) {
                     System.out.println("------------------------------");
